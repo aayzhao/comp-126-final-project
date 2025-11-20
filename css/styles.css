@@ -1,4 +1,8 @@
 body {
+    /* Default font assignments */
+    font-family: "Arsenal", sans-serif;
+    font-weight: 500;
+    /* End Default Font Assignments */
     background-color: lightgray;
     padding-top: 3.5em;
 }
@@ -6,6 +10,18 @@ body {
 .demo {
     background-color: #cdebc5;
     color: #36454f;
+}
+
+.demo span {
+    font-size: 1.2em;
+}
+
+.demo img {
+    height: 2.5em;
+}
+
+byline {
+    font-size: 0.65em;
 }
 
 .menu {
