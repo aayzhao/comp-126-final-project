@@ -1,1 +1,86 @@
+body {
+    background-color: lightgray;
+    padding-top: 3.5em;
+}
 
+.demo {
+    background-color: #cdebc5;
+    color: #36454f;
+}
+
+.menu {
+    background-color: #cdebc5;
+}
+
+nav .show ~ .menu {
+    background-color: #cdebc5;
+    background: #cdebc5;
+}
+
+.button {
+    background-color: #ffd1dc;
+    color: white;
+    text-decoration: none;
+}
+
+.button:hover, .button:focus {
+    background-color: #e67ca8;
+    color: #ffd1dc;
+    text-decoration: underline;
+}
+
+/* BEGIN FONT CLASS DECLARATIONS */
+
+/* Arsenal SC fonts */
+
+.arsenal-sc-regular {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arsenal-sc-bold {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arsenal-sc-regular-italic {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arsenal-sc-bold-italic {
+  font-family: "Arsenal SC", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Arsenal fonts */
+
+.arsenal-regular {
+  font-family: "Arsenal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arsenal-bold {
+  font-family: "Arsenal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arsenal-regular-italic {
+  font-family: "Arsenal", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arsenal-bold-italic {
+  font-family: "Arsenal", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* END FONT CLASS DECLARATIONS */
