@@ -110,7 +110,7 @@ nav .show ~ .menu {
             bottom: 0%;
             text-align: left;
             padding: 0 0 0 5%;
-            background-color: #e67ca8;
+            background-color: #B42261;
             color: #ffd1dc;
             opacity: 60%;
         }
@@ -121,7 +121,7 @@ nav .show ~ .menu {
         h3 {
             opacity: 85%;
             background-color: #ffd1dc;
-            color: #e67ca8;
+            color: #B42261;
         }
     }
 }
