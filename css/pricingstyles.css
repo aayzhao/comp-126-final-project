@@ -1,0 +1,70 @@
+.pricing-section {
+    padding: 2em 1em;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.pricing-section h1 {
+    font-size: 2em;
+    color: #36454f;
+    margin-bottom: 1em;
+}
+
+.pricing-list {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.price-box {
+    background: white;
+    border: 2px solid #ffd1dc;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+.price-box h2 {
+    margin: 0 0 0.3em 0;
+    color: #36454f;
+    font-size: 1.4em;
+}
+
+.amount {
+    font-size: 1.8em;
+    color: #e67ca8;
+    margin-bottom: 0.6em;
+}
+
+.price-box ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.5em;
+    color: #36454f;
+}
+
+.note {
+    margin-top: 2em;
+    font-style: italic;
+    color: #36454f;
+}
+
+/* --- desktop --- */
+@media (min-width: 680px) {
+    .pricing-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2em;
+        text-align: left;
+    }
+
+    .price-box {
+        padding: 2em;
+    }
+
+    .pricing-section h1 {
+        font-size: 2.5em;
+    }
+}
