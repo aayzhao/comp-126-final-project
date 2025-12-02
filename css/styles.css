@@ -1,6 +1,36 @@
 body {
+    /* Default font assignments */
+    font-family: "Arsenal", sans-serif;
+    font-weight: 450;
+    /* End Default Font Assignments */
     background-color: lightgray;
     padding-top: 3.5em;
+}
+
+title {
+    font-family: "Arsenal SC", sans-serif;
+    font-weight: 700;
+    font-size: 96pt;
+}
+
+p {
+    font-weight: 400;
+    font-size: 20pt;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 60pt;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 40pt;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 32pt;
 }
 
 .demo {
@@ -8,8 +38,32 @@ body {
     color: #36454f;
 }
 
+.demo span {
+    font-size: 1.2em;
+}
+
+.demo img {
+    height: 2.25em;
+}
+
+byline {
+    font-size: 0.5em;
+    display: block;
+}
+
+@media (min-width: 680px) {
+    .demo img {
+        height: 2.5em;
+    }
+    byline {
+        display: inline;
+        font-size: 0.65em;
+    }
+}
+
 .menu {
     background-color: #cdebc5;
+    font-family: "Arsenal SC", sans-serif;
 }
 
 nav .show ~ .menu {
@@ -27,6 +81,49 @@ nav .show ~ .menu {
     background-color: #e67ca8;
     color: #ffd1dc;
     text-decoration: underline;
+}
+
+.home-grid-container {
+    display: grid;
+    padding: 1em 5%;
+    grid-template-columns: 1fr;
+    row-gap: 0.5em;
+    align-items: start;
+
+    section {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 3/2;
+        padding: 0;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            transition: all 0.6s ease-in-out;
+            font-size: 2em;
+            position: absolute;
+            width: 100%;
+            bottom: 0%;
+            text-align: left;
+            padding: 0 0 0 5%;
+            background-color: #B42261;
+            color: #ffd1dc;
+            opacity: 60%;
+        }
+    }
+
+    section:hover, section:focus {
+        transition: all 0.6s ease-in-out;
+        h3 {
+            opacity: 85%;
+            background-color: #ffd1dc;
+            color: #B42261;
+        }
+    }
 }
 
 /* BEGIN FONT CLASS DECLARATIONS */
