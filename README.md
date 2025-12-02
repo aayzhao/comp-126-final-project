@@ -8,3 +8,12 @@ Anna Phan
 Bea Babel
 
 William Zhuravlev
+
+## Credits
+Thanks to Google fonts (for the fonts), Font Awesome (for the crow icon that serves as a burger menu),
+and Picnic CSS (for our interactable nav skeleton code)!
+
+Aaron - home/portfolios page, events page
+Anna - About page, couples page
+Bea - Contact page, grad page
+Will - Pricing page, engagements page
