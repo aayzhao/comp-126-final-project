@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1, shrink-to-fit=no">
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+        <!-- Frameworks and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+
+        <!-- Local Stylesheets-->
+        <link rel="stylesheet" href="css/styles.css">
+        <title>126 Final Project</title>
+    </head>
+    <body>
+        <nav class="demo">
+            <a href="#" class="brand">
+                <img class="logo" src="img/phantastic-pics-logo.png" alt="Phantastic Pics Logo"/>
+                <span>Phantastic Pics</span>
+                <byline>By Anna Phan</byline>
+            </a>
+
+            <!-- responsive-->
+            <input id="bmenub" type="checkbox" class="show">
+            <label for="bmenub" class="burger button">
+                <i class="fa-solid fa-crow"></i>
+                </label>
+
+            <div class="menu">
+                <a href="#" class="button icon-picture">About</a>
+                <a href="#" class="button icon-puzzle">Pricing</a>
+                <a href="#" class="button icon-puzzle">Contact</a>
+                <a href="#" class="button icon-puzzle">Portfolio</a>
+            </div>
+        </nav>
+        <aside> 
+        <div class="booking-grid">
+
+            <div class="form-wrapper">
+                <form id="booking-form">
+                    
+                    <!-- Success/Error Message -->
+                    <div id="form-message" class="form-message"></div>
+
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                    <span id="name-error" class="error"></span>
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname">
+
+                    <div class="two-col">
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span id="email-error" class="error"></span>
+                        </div>
+                        <div>
+                            <label for="phone">Phone number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (___) ___-____" required>
+                        </div>
+                    </div>
+
+                    <label for="date">Booking Date</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="comments">Comments</label>
+                    <textarea id="comments" name="comments"></textarea>
+
+                    <button class="submit-btn" type="submit">Submit Order</button>
+
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-content"></div>
+            </div>
+        </div>
+    </aside>
+
+<script>
+const form = document.getElementById('booking-form');
+const formMessage = document.getElementById('form-message');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Clear previous errors
+    document.getElementById('name-error').textContent = '';
+    document.getElementById('email-error').textContent = '';
+    formMessage.textContent = '';
+
+    let valid = true;
+
+    const firstname = document.getElementById('firstname');
+    const email = document.getElementById('email');
+
+    // First Name validation
+    if (!firstname.value.trim()) {
+        document.getElementById('name-error').textContent = 'This field is required';
+        valid = false;
+    }
+
+    // Email validation
+    if (!email.value.trim()) {
+        document.getElementById('email-error').textContent = 'Please enter your email address';
+        valid = false;
+    } else if (!email.value.includes('@')) {
+        document.getElementById('email-error').textContent = 'Please enter a valid email address';
+        valid = false;
+    }
+
+    if (valid) {
+        formMessage.textContent = 'Sending...';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwChwHsrquTJptzvfxEO7uIUXqH3pc5WgEOhPMujuGCKNK5cXDG4A9vcEQkYJ0Ml8XL/exec';
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            formMessage.textContent = 'Message sent successfully!';
+            setTimeout(() => {
+            window.location.href = 'success.html';
+            }, 100); // .1 seconds delay
+})
+
+            .catch(error => {
+                formMessage.textContent = 'Oops! Something went wrong.';
+                console.error('Error!', error.message);
+            });
+    }
+});
+</script>
+
+</body>
+</html>
