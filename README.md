@@ -14,6 +14,9 @@ Thanks to Google fonts (for the fonts), Font Awesome (for the crow icon that ser
 and Picnic CSS (for our interactable nav skeleton code)!
 
 Aaron - home/portfolios page, events page
+
 Anna - About page, couples page
+
 Bea - Contact page, grad page
+
 Will - Pricing page, engagements page
